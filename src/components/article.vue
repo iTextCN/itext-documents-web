@@ -178,10 +178,10 @@
     </div>
 </template>
 <script>
-    import Navigate from './navigate.vue';
-    import navigate from '../config/navigate';
+//    import Navigate from './navigate.vue';
+//    import navigate from '../config/navigate';
     import navMenu from './menu.vue';
-    import bus from './bus';
+//    import bus from './bus';
 
     export default {
         components: {
