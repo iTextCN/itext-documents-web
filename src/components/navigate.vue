@@ -5,7 +5,7 @@
     <div class="navigate">
         <div class="ad" @click="handleAd" v-if="lang === 'zh-CN'">
             <div class="ad-main">
-                <img src="../images/ad-juejin.png">
+                <img src="../../static/images/ad-juejin.png">
                 <ad-send></ad-send>
             </div>
         </div>
@@ -57,7 +57,7 @@
             <div class="i-article">
                 <Row>
                     <Col span="10">
-                        <img src="../images/vue-book.png" style="display: block;width: 90%;margin: 0 auto;">
+                        <img src="../../static/images/vue-book.png" style="display: block;width: 90%;margin: 0 auto;">
                     </Col>
                     <Col span="14">
                         <div style="padding: 32px">
