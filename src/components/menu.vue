@@ -15,13 +15,13 @@
             <div class="wrapper-header-nav-list">
                 <Menu-item name="guide">
                     <Icon type="ios-navigate"></Icon>
-                    index.guide
+                    指南
                 </Menu-item>
                 <Menu-item name="component">
                     <Icon type="ios-keypad"></Icon>
                     index.component
                 </Menu-item>
-                <Menu-item name="live" v-if="lang === 'zh-CN'">
+                <Menu-item name="live">
                     <Badge :dot="liveDot">
                         <Icon type="ios-videocam"></Icon>
                         index.live
@@ -75,8 +75,7 @@
                 guide: {},
                 navigateList: [],
                 liveDot: false,
-                currentActiveKey: this.activeKey,
-                lang: this.$lang
+                currentActiveKey: this.activeKey
             };
         },
         watch: {
@@ -89,7 +88,6 @@
         },
         methods: {
             handleSearch (path) {
-                if (this.lang === 'en-US') path += '-en';
                 this.search = '';
                 this.$refs.select.setQuery('');
                 this.$nextTick(() => {
@@ -99,24 +97,22 @@
                 });
             },
             handleSelect (type) {
-                const pathSuffix = this.lang === 'zh-CN' ? '' : '-en';
-
                 if (type === 'donate') {
                     bus.$emit('on-donate-show');
                 } else if (type === 'github') {
                     window.open('https://github.com/iview/iview');
                 } else if (type === 'guide') {
-                    this.$router.push(navigate.guide[0].path + pathSuffix);
+                    this.$router.push(navigate.guide[0].path);
                 } else if (type === 'component') {
-                    this.$router.push(navigate.beforeComponents[0].path + pathSuffix);
+                    this.$router.push(navigate.beforeComponents[0].path);
                 } else if (type === 'practice') {
-                    this.$router.push(navigate.practice[0].path + pathSuffix);
+                    this.$router.push(navigate.practice[0].path);
                 } else if (type === 'cli') {
                     this.$router.push('/cli' + pathSuffix);
                 } else if (type === 'live') {
                     this.$router.push('/live');
                 } else if (type === 'iview-loader') {
-                    this.$router.push('/docs/guide/iview-loader' + pathSuffix);
+                    this.$router.push('/docs/guide/iview-loader');
                 } else if (type === 'iview-admin') {
                     window.open('https://github.com/iview/iview-admin');
                 }
@@ -161,7 +157,6 @@
             }
         },
         created () {
-            this.lang = this.$lang;
             let list = [];
             for (let i = 0; i < navigate.components.length; i++) {
                 for (let j = 0; j < navigate.components[i].list.length; j++) {

@@ -5,7 +5,7 @@ const list = {
         {
             title: '介绍',
             titleEn: 'Introduction',
-            path: '/docs/guide/introduce'
+            path: '/'
         },
         {
             title: '设计原则',
