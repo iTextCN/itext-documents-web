@@ -97,7 +97,6 @@
     import version from '../data/config';
 
     export default {
-        components: { adSend },
         props: {
             type: {
                 type: [String, Number]

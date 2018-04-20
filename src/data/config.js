@@ -1,17 +1,15 @@
 /**
- * Created by aresn on 16/7/18.
+ * @file config.js
+ * @author liumapp
+ * @email liumapp.com@gmail.com
+ * @homepage http://www.liumapp.com
+ * @date 4/20/18
  */
-import Env from './env';
-
 let config = {
-    env: Env,
-    filePath: 'https://file.iviewui.com/file/',
+    env: "development",
     version: 36,
     liveVersion: 1
 };
 
-if (config.env === 'development') {
-    config.filePath = 'http://127.0.0.1:9800/overview/'
-}
 
 export default config;
