@@ -12,47 +12,33 @@
             <router-link to="/" class="wrapper-header-nav-logo">
                 <img src="../../static/images/itext_nav.png">
             </router-link>
-            <div class="wrapper-header-nav-search">
-                <i-select
-                    ref="select"
-                    v-model="search"
-                    filterable
-                    :placeholder="searchText"
-                    :not-found-text="notFoundText"
-                    @on-change="handleSearch">
-                    <i-option v-for="item in navigateList" :key="item.path" :value="item.path">
-                        <template v-if="lang === 'zh-CN'">{{ item.title }}</template>
-                        <template v-else>{{ item.title.split(' ')[0] }}</template>
-                    </i-option>
-                </i-select>
-            </div>
             <div class="wrapper-header-nav-list">
                 <Menu-item name="guide">
                     <Icon type="ios-navigate"></Icon>
-                    {{ $t('index.guide') }}
+                    index.guide
                 </Menu-item>
                 <Menu-item name="component">
                     <Icon type="ios-keypad"></Icon>
-                    {{ $t('index.component') }}
+                    index.component
                 </Menu-item>
                 <Menu-item name="live" v-if="lang === 'zh-CN'">
                     <Badge :dot="liveDot">
                         <Icon type="ios-videocam"></Icon>
-                        {{ $t('index.live') }}
+                        index.live
                     </Badge>
                 </Menu-item>
                 <Menu-item name="practice">
                     <Icon type="ios-analytics"></Icon>
-                    {{ $t('index.practice') }}
+                    index.practice
                 </Menu-item>
                 <Submenu name="ecosystem">
                     <template slot="title">
                         <Icon type="ios-infinite"></Icon>
-                        {{ $t('index.ecosystem') }}
+                        index.ecosystem
                     </template>
                     <Menu-item name="cli">
                         <!--<Icon type="settings"></Icon>-->
-                        {{ $t('index.cli') }}
+                        index.cli
                     </Menu-item>
                     <Menu-item name="iview-loader">
                         <!--<Icon type="settings"></Icon>-->
@@ -69,17 +55,13 @@
                 <ButtonGroup>
                     <Button type="ghost" size="small" icon="social-github" @click="handleGoToGitHub"></Button>
                     <Button type="ghost" size="small" icon="social-twitter" @click="handleGoToTwitter"></Button>
-                    <Button type="ghost" size="small" @click="handleChangeLang" >
-                        <template v-if="lang === 'zh-CN'">EN</template>
-                        <template v-else>中文</template>
-                    </Button>
                 </ButtonGroup>
             </div>
         </div>
     </Menu>
 </template>
 <script>
-//    import navigate from '../config/navigate';
+    import navigate from '../data/navigate';
 //    import Config from '../config/config';
 //    import bus from './bus';
 
@@ -89,12 +71,11 @@
         },
         data () {
             return {
-                search: '',
+                index: {},
+                guide: {},
                 navigateList: [],
                 liveDot: false,
                 currentActiveKey: this.activeKey,
-                searchText: this.$t('index.search'),
-                notFoundText: this.$t('index.notFound'),
                 lang: this.$lang
             };
         },

@@ -178,14 +178,14 @@
     </div>
 </template>
 <script>
-//    import Navigate from './navigate.vue';
-//    import navigate from '../config/navigate';
+    import Navigate from '../components/navigate.vue';
+    import navigate from '../data/navigate';
     import navMenu from './menu.vue';
 //    import bus from './bus';
 
     export default {
         components: {
-//            Navigate,
+            Navigate,
             navMenu
         },
         data () {
@@ -252,9 +252,6 @@
                 const title = examples[i].querySelectorAll('header span a')[0].getAttribute('href').replace('#', '');
                 this.list.push(title);
             }
-            bus.$on('on-donate-show', () => {
-                this.donate = true;
-            })
         }
     }
 </script>

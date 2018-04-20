@@ -93,10 +93,8 @@
     </div>
 </template>
 <script>
-    import navigate from '../config/navigate';
-    import version from '../config/config';
-    import bus from './bus';
-    import adSend from './ad-send.vue';
+    import navigate from '../data/navigate';
+    import version from '../data/config';
 
     export default {
         components: { adSend },
@@ -115,9 +113,6 @@
             }
         },
         methods: {
-            handleDonate () {
-                bus.$emit('on-donate-show');
-            },
             handleSelect (path) {
                 if (this.lang === 'en-US') path += '-en';
                 this.$nextTick(() => {
