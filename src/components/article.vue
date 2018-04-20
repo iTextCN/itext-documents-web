@@ -49,40 +49,40 @@
                     <i-col span="5">
                         <h4>
                             <Icon type="link"></Icon>
-                            {{ $t('index.links') }}
+                            {{ index.links }}
                         </h4>
                         <ul>
                             <li>
-                                <a href="https://www.talkingdata.com/" target="_blank">TalkingData</a> - {{ $t('index.td') }}
+                                <a href="https://www.talkingdata.com/" target="_blank">TalkingData</a> - {{ index.td }}
                             </li>
                             <li>
-                                <a href="http://mi.talkingdata.com/" target="_blank">Marketing Intelligence</a> - {{ $t('index.td_mi') }}
+                                <a href="http://mi.talkingdata.com/" target="_blank">Marketing Intelligence</a> - {{ index.td_mi }}
                             </li>
                             <li>
-                                <a href="https://github.com/TalkingData/Fregata" target="_blank">Fregata</a> - {{ $t('index.Fregata') }}
+                                <a href="https://github.com/TalkingData/Fregata" target="_blank">Fregata</a> - {{ index.Fregata }}
                             </li>
                             <li>
-                                <a href="https://github.com/TalkingData/Myna" target="_blank">Myna</a> - {{ $t('index.Myna') }}
+                                <a href="https://github.com/TalkingData/Myna" target="_blank">Myna</a> - {{ index.Myna }}
                             </li>
                             <li>
-                                <a href="https://github.com/TalkingData/owl" target="_blank">OWL</a> - {{ $t('index.OWL') }}
+                                <a href="https://github.com/TalkingData/owl" target="_blank">OWL</a> - {{ index.OWL }}
                             </li>
                         </ul>
                     </i-col>
                     <i-col span="5" offset="2">
                         <h4>
                             <Icon type="chatbubbles"></Icon>
-                            {{ $t('index.community') }}
+                            {{ index.community }}
                         </h4>
                         <ul>
                             <li>
-                                <a href="https://github.com/iview/iview/issues" target="_blank">{{ $t('index.feedback') }}</a>
+                                <a href="https://github.com/iview/iview/issues" target="_blank">{{ index.feedback }}</a>
                             </li>
                             <li>
-                                <a href="https://www.iviewui.com/new-issue" target="_blank">{{ $t('index.bug') }}</a>
+                                <a href="https://www.iviewui.com/new-issue" target="_blank">{{ index.bug }}</a>
                             </li>
                             <li>
-                                <a href="https://gitter.im/iview/iview" target="_blank">{{ $t('index.chat') }}</a>
+                                <a href="https://gitter.im/iview/iview" target="_blank">{{ index.chat }}</a>
                             </li>
                             <li>
                                 <a href="https://segmentfault.com/t/iview" target="_blank">SegmentFault</a>
@@ -92,7 +92,7 @@
                     <i-col span="5" offset="2">
                         <div class="footer-aside">
                             <div class="footer-logo">
-                                <img src="../images/itext_nav.png">
+                                <img src="../../static/images/itext_nav.png">
                             </div>
                         </div>
                     </i-col>
@@ -123,58 +123,58 @@
                 <!--<p>您可以用公司的名义进行赞助，赞助信息将在文档页展示。联系邮箱 <a href="mailto:admin@aresn.com">admin@aresn.com</a></p>-->
                 <!--<h3>个人可使用 微信 或 支付宝 捐助：</h3>-->
                 <!--<div>-->
-                    <!--<img src="../images/pay.png" style="width: 100%">-->
+                    <!--<img src="../../static/images/pay.png" style="width: 100%">-->
                 <!--</div>-->
             <!--</div>-->
         <!--</Modal>-->
-        <Modal v-model="donate" title="与 iView 合作，有效触达技术人群" @on-ok="handleModalClose" @on-cancel="handleModalClose" width="600" class-name="vertical-center-modal">
-            <div class="ivu-article">
-                <p>如果您有品牌推广、活动推广、招聘推广、社区合作的需求，欢迎联系我们。</p>
-                <p>联系邮箱 <a href="mailto:admin@aresn.com">admin@aresn.com</a> 咨询。</p>
-                <p>广告位如下图所示：</p>
-                <div>
-                    <Carousel v-if="donate" v-model="adCarousel" loop autoplay :autoplay-speed="3000" dots="outside">
-                        <CarouselItem>
-                            <div class="demo-carousel" style="height: 300px">
-                                <img src="../images/ad-demo1.png" style="width: 100%">
-                            </div>
-                        </CarouselItem>
-                        <CarouselItem>
-                            <div class="demo-carousel" style="height: 300px;">
-                                <img src="../images/ad-demo2.png" style="width: 100%">
-                            </div>
-                        </CarouselItem>
-                    </Carousel>
-                </div>
-            </div>
-        </Modal>
+        <!--<Modal v-model="donate" title="与 iView 合作，有效触达技术人群" @on-ok="handleModalClose" @on-cancel="handleModalClose" width="600" class-name="vertical-center-modal">-->
+            <!--<div class="ivu-article">-->
+                <!--<p>如果您有品牌推广、活动推广、招聘推广、社区合作的需求，欢迎联系我们。</p>-->
+                <!--<p>联系邮箱 <a href="mailto:admin@aresn.com">admin@aresn.com</a> 咨询。</p>-->
+                <!--<p>广告位如下图所示：</p>-->
+                <!--<div>-->
+                    <!--<Carousel v-if="donate" v-model="adCarousel" loop autoplay :autoplay-speed="3000" dots="outside">-->
+                        <!--<CarouselItem>-->
+                            <!--<div class="demo-carousel" style="height: 300px">-->
+                                <!--<img src="../../static/images/ad-demo1.png" style="width: 100%">-->
+                            <!--</div>-->
+                        <!--</CarouselItem>-->
+                        <!--<CarouselItem>-->
+                            <!--<div class="demo-carousel" style="height: 300px;">-->
+                                <!--<img src="../../static/images/ad-demo2.png" style="width: 100%">-->
+                            <!--</div>-->
+                        <!--</CarouselItem>-->
+                    <!--</Carousel>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</Modal>-->
         <!--<Modal v-model="donate" v-if="lang !== 'zh-CN'" title="Donate iView project" @on-ok="handleModalClose" @on-cancel="handleModalClose" class-name="vertical-center-modal">-->
             <!--<div class="ivu-article">-->
                 <!--<p>iView is an open source project with MIT licenses that you can use for free in your personal or business projects. However, if you feel that iView has helped your project to improve development efficiency, you can use donations to express your gratitude: )</p>-->
                 <!--<h3>Use Wechat or Alipay to donate：</h3>-->
                 <!--<div>-->
-                    <!--<img src="../images/pay.png" style="width: 100%">-->
+                    <!--<img src="../../static/images/pay.png" style="width: 100%">-->
                 <!--</div>-->
             <!--</div>-->
         <!--</Modal>-->
-        <Modal v-model="ask" title="免费加入 iView 官方QQ群参与讨论" class-name="vertical-center-modal">
-            <div class="ivu-article">
-                <p>免费加入官方QQ讨论群，交流 iView 技术问题。</p>
-                <p>群号：<strong>623520058</strong></p>
-                <p>二维码：</p>
-                <p>
-                    <img src="../images/qqgroup2.png" style="display: block;width: 50%;margin: 0 auto;">
-                </p>
-                <p>
-                    <Alert show-icon>仅限开发者加入，请勿讨论与技术无关的问题，比如发招聘信息等。</Alert>
-                </p>
-            </div>
-        </Modal>
-        <!-- todo 提问 -->
-        <div class="ask-question" @click="ask = true" v-if="lang === 'zh-CN'">
-            <Icon type="ios-people" size="24"></Icon>
-            <p>QQ群</p>
-        </div>
+        <!--<Modal v-model="ask" title="免费加入 iView 官方QQ群参与讨论" class-name="vertical-center-modal">-->
+            <!--<div class="ivu-article">-->
+                <!--<p>免费加入官方QQ讨论群，交流 iView 技术问题。</p>-->
+                <!--<p>群号：<strong>623520058</strong></p>-->
+                <!--<p>二维码：</p>-->
+                <!--<p>-->
+                    <!--<img src="../../static/images/qqgroup2.png" style="display: block;width: 50%;margin: 0 auto;">-->
+                <!--</p>-->
+                <!--<p>-->
+                    <!--<Alert show-icon>仅限开发者加入，请勿讨论与技术无关的问题，比如发招聘信息等。</Alert>-->
+                <!--</p>-->
+            <!--</div>-->
+        <!--</Modal>-->
+        <!--&lt;!&ndash; todo 提问 &ndash;&gt;-->
+        <!--<div class="ask-question" @click="ask = true" v-if="lang === 'zh-CN'">-->
+            <!--<Icon type="ios-people" size="24"></Icon>-->
+            <!--<p>QQ群</p>-->
+        <!--</div>-->
     </div>
 </template>
 <script>
@@ -185,7 +185,7 @@
 
     export default {
         components: {
-            Navigate,
+//            Navigate,
             navMenu
         },
         data () {
@@ -195,7 +195,9 @@
                 ask: false,
                 activeKey: '',
                 lang: this.$lang,
-                adCarousel: 0
+                adCarousel: 0,
+                index: {},
+                link: {}
             }
         },
         methods: {
