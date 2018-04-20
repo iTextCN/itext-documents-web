@@ -79,8 +79,8 @@
     </Menu>
 </template>
 <script>
-    import navigate from '../config/navigate';
-    import Config from '../config/config';
+//    import navigate from '../config/navigate';
+//    import Config from '../config/config';
 //    import bus from './bus';
 
     export default {
